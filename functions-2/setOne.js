@@ -15,11 +15,23 @@ The code above is an example of 'function declaration.' Please re-write the func
 */
 
 // RE-WRITE THE ABOVE FUNCTION IN 'FUNCTION EXPRESSION' SYNTAX HERE.
-
+const findGrape = function (arr) {
+    for(let i=0; i<arr.length; i++) {
+        if(arr[i].color === "purple") {
+            return console.log(`The fruit with index ${arr.indexOf(arr[i])} is a grape`)
+        } 
+    }
+    }
 
 
 // RE-WRITE THE ABOVE FUNCTION IN 'ARROW FUNCTION' SYNTAX HERE.
-
+const findGrape = arr => {
+    for(let i=0; i<arr.length; i++) {
+        if(arr[i].color === "purple") {
+            return console.log(`The fruit with index ${arr.indexOf(arr[i])} is a grape`)
+        } 
+    }
+    }
 
 
 ////////// PROBLEM 2 //////////
@@ -28,10 +40,10 @@ Write a one line function (give a name of your choice) with an implicit return t
 */
 
 // CODE HERE
-
+const problem1 = (parameter1, parameter2) => console.log(`The first parameter is ${parameter1}. The second parameter is ${parameter2}`)
 
 // INVOKE THE FUNCTION HERE. THE PARAMETERS TAKE ANY DATATYPE.
-
+problem1("banana", "grape")
 
 ////////// PROBLEM 3 //////////
 /*
@@ -40,10 +52,14 @@ Then, outside of the greeting function, invoke the greeting function, passing in
 */
 
 // CODE 'GREETING FUNCTION' HERE
-
+function greeting(firstName, lastName, cb) {
+    cb(firstName + " " + lastName);
+    }
 
 // INVOKE 'GREETING FUNCTION' HERE
-
+greeting("John", "Doe", (fullName) =>
+console.log(`Hello, my full name is ${fullName}`)
+);
 
 ////////// PROBLEM 4 //////////
 
